@@ -1,22 +1,34 @@
-  import React from "react"
-  import {
+import React from "react"
+import {
   View,
   Text,
   SafeAreaView,
-  TextInput
-  } from 'react-native'
+  TextInput,
+  StyleSheet,
+  useColorScheme
+} from 'react-native'
 
-  function App(){
-  return(
-    <SafeAreaView>
-      <View>
-      <Text>Hello React Native World into this !</Text>
-        <Text>This is my first react native programming..</Text>
-        <TextInput>Name is something ew have</TextInput>
-        <TextInput>Password is not empty</TextInput>
-      </View>
-    </SafeAreaView>
+function App(): JSX.Element {
+  return (
+    <View
+      style={{
+        padding: 10
+      }}>
+      <Text
+        style={{
+         fontSize:50 
+        }}>Hello React Native World into this !</Text>
+      <Text>Enter Username:</Text>
+      <TextInput
+        style={{
+          height: 40,
+          width: 00,
+          borderColor: 'black',
+          borderWidth: 1
+        }}
+        defaultValue="enter username" />
+    </View>
   )
-  }
+}
 
-  export default App
+export default App
