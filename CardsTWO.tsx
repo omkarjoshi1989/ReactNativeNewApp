@@ -6,17 +6,21 @@ import ElevatedCard from "./components/ElevatedCard";
 import FancyCard from "./components/FancyCard";
 import ActionCard from "./components/ActionCard";
 import Flag from "./components/Flag";
+import ContactsList from "./components/ContactsList";
 
 export default function CardsTWO(): JSX.Element {
     return (
         <SafeAreaView style={[styles.styleMargin,]}>
             <ScrollView>
-            <View style={styles.styleCenterText}><Text>Hello Cards Demo</Text></View>
-            <FlatCard />
-            <ElevatedCard />
-            <FancyCard />
-            <ActionCard />
-            <Flag />
+                <View style={styles.styleCenterText}>
+                    <Text>Hello Cards Demo</Text>
+                </View>
+                <ContactsList />
+                <Flag />
+                <ActionCard />
+                <FancyCard />
+                <ElevatedCard />
+                <FlatCard />
             </ScrollView>
         </SafeAreaView>
     )
