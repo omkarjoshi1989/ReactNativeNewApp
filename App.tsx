@@ -16,7 +16,7 @@ function App(): JSX.Element {
       }}>
       <Text
         style={{
-         fontSize:50 
+          fontSize: 50
         }}>Hello React Native World into this !</Text>
       <Text>Enter Username:</Text>
       <TextInput
