@@ -4,7 +4,8 @@ import React from 'react'
 export default function FancyCard() {
     return (
         <View>
-            <Text style={styles.headingText}>Trending Places</Text>
+            <View style={styles.styleCenterText}><Text>FANCY CARDS</Text></View>
+
             <View style={[styles.card, styles.cardElevated]}>
                 <Image
                     style={styles.cardImage}
@@ -42,4 +43,8 @@ const styles = StyleSheet.create({
     cardLabel: { color: 'white', alignItems: 'center', },
     cardDescription: { color: 'white', },
     cardFooter: { color: 'white', },
+    styleCenterText: {
+        marginTop: 16,
+        alignItems: 'center'
+    },
 })

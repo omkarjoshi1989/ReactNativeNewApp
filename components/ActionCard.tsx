@@ -1,15 +1,20 @@
-import { Linking, StyleSheet, Text, View } from 'react-native'
+import { Linking, StyleSheet, Text, View, TouchableOpacity, SafeAreaView } from 'react-native'
 import React from 'react'
 
-export default function ActionCard() {
+export default function ActionCard(): JSX.Element {
     function openWebsite(url: string) {
         Linking.openURL(url)
     }
     return (
-        <View style={styles.styleViewCenter}>
-            <Text style={{fontWeight:'bold'}}>ActionCard</Text>
-            <Text style={styles.styleBackground}>Dynamic Text</Text>
-        </View>
+        <SafeAreaView>
+            <View style={styles.styleCenterText}><Text>ACTION CLICK CARDS</Text></View>
+            <View>
+                <TouchableOpacity
+                    onPress={() => openWebsite('https://google.co.in')}>
+                    <Text>Click Here!</Text>
+                </TouchableOpacity>
+            </View>
+        </SafeAreaView>
     )
 }
 
@@ -18,6 +23,9 @@ const styles = StyleSheet.create({
         backgroundColor: 'yellow',
     },
     styleViewCenter: {
-        alignItems: 'center',
-    }
+    },
+    styleCenterText: {
+        marginTop: 16,
+        alignItems: 'center'
+    },
 })

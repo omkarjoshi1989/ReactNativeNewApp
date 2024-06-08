@@ -4,7 +4,7 @@ import { View, Text, SafeAreaView, StyleSheet } from 'react-native';
 export default function FlatCard(): JSX.Element {
     return (
         <SafeAreaView>
-            <Text style={styles.headingText}>Flat Card</Text>
+            <View style={styles.styleCenterText}><Text>FLAT CARDS</Text></View>
             <View style={styles.container}>
                 <View style={[styles.card, styles.cardRed]}>
                     <Text style={styles.styleText}>RED</Text>
@@ -54,5 +54,9 @@ const styles = StyleSheet.create({
     },
     styleText: {
         color: 'white'
-    }
+    },
+    styleCenterText: {
+        marginTop: 16,
+        alignItems: 'center'
+    },
 })

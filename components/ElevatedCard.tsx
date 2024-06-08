@@ -4,23 +4,23 @@ import React from 'react'
 export default function ElevatedCard() {
   return (
     <SafeAreaView>
-      <Text>ElevatedCard</Text>
+      <View style={styles.styleCenterText}><Text>ELEVATED CARDS</Text></View>
       <ScrollView horizontal
         style={styles.container}>
-        <View style={[styles.card, styles.cardElevated]}>
-          <Text>TAP HERE 1</Text>
+        <View style={[styles.card, styles.cardElevated, styles.styleRedBg]}>
+          <Text style={styles.styleWhiteText}>TAP HERE for RED</Text>
         </View>
-        <View style={[styles.card, styles.cardElevated]}>
-          <Text>TAP HERE 2</Text>
+        <View style={[styles.card, styles.cardElevated, styles.styleGreenBg]}>
+          <Text style={styles.styleWhiteText}>TAP HERE for GREEN</Text>
         </View>
-        <View style={[styles.card, styles.cardElevated]}>
-          <Text>TAP HERE 3</Text>
+        <View style={[styles.card, styles.cardElevated, styles.styleBlueBg]}>
+          <Text style={styles.styleWhiteText}>TAP HERE BLUE</Text>
         </View>
-        <View style={[styles.card, styles.cardElevated]}>
-          <Text>TAP HERE 4</Text>
+        <View style={[styles.card, styles.cardElevated, styles.styleYellowBg]}>
+          <Text style={styles.styleWhiteText}>TAP HERE YELLOW</Text>
         </View>
-        <View style={[styles.card, styles.cardElevated]}>
-          <Text>TAP HERE 5</Text>
+        <View style={[styles.card, styles.cardElevated, styles.styleOrangeBg]}>
+          <Text style={styles.styleWhiteText}>TAP HERE ORANGE</Text>
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -34,19 +34,41 @@ const styles = StyleSheet.create({
     height: 100,
     alignItems: 'center',
     justifyContent: 'center',
-    borderRadius:8
+    borderRadius: 8,
   },
   cardElevated: {
     backgroundColor: '#CAD5E2',
     margin: 8,
     elevation: 4,
     shadowOffset: {
-      height:2, width: 2
+      height: 2, width: 2
     },
-    shadowColor:'red'
+    shadowColor: 'red'
   },
   container: {
     padding: 8,
     margin: 8
+  },
+  styleCenterText: {
+    marginTop: 16,
+    alignItems: 'center'
+  },
+  styleRedBg: {
+    backgroundColor: 'red'
+  },
+  styleGreenBg: {
+    backgroundColor: 'green'
+  },
+  styleBlueBg: {
+    backgroundColor: 'blue'
+  },
+  styleYellowBg: {
+    backgroundColor: 'yellow'
+  },
+  styleOrangeBg: {
+    backgroundColor: 'orange'
+  },
+  styleWhiteText: {
+    color: 'white'
   }
 })

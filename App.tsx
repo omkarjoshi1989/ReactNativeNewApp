@@ -22,7 +22,7 @@ function App(): JSX.Element {
       <TextInput
         style={{
           height: 40,
-          width: 00,
+          width: 40,
           borderColor: 'black',
           borderWidth: 1
         }}
