@@ -6,6 +6,7 @@ export default function ContactsList() {
         { uid: 1, name: "Varada", status: "present" },
         { uid: 2, name: "Rajashree", status: "cooking" },
         { uid: 3, name: "Omkar", status: "online" },
+        { uid: 4, name: "Shreeram", status: "online" },
     ]
     return (
         <View style={[styles.styleCenterText]}>
@@ -14,8 +15,10 @@ export default function ContactsList() {
                 scrollEnabled={true}>
                 {contacts.map(({ uid, name, status }) => (
                     <View key={uid}>
-                        <Text>NAME:{name}</Text>
-                        <Text>STATUS:{status}</Text>
+                        <View style={styles.rowStyle}>
+                            <Text style={styles.marginLeftStyle}>NAME:{name}</Text>
+                            <Text>STATUS:{status}</Text>
+                        </View>
                     </View>
                 ))}
             </ScrollView>
@@ -28,6 +31,7 @@ const styles = StyleSheet.create({
         marginTop: 16,
         alignItems: 'center'
     },
-    container: {},
-    userCard: {},
+    container: { height: 100, backgroundColor: '#cccccc', },
+    rowStyle: { flexDirection: 'row', justifyContent: 'space-around' },
+    marginLeftStyle: { marginLeft: 16 },
 })

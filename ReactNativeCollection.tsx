@@ -8,7 +8,7 @@ import ActionCard from "./components/ActionCard";
 import Flag from "./components/Flag";
 import ContactsList from "./components/ContactsList";
 
-export default function CardsTWO(): JSX.Element {
+export default function ReactNativeCollection(): JSX.Element {
     return (
         <SafeAreaView style={[styles.styleMargin,]}>
             <ScrollView>
