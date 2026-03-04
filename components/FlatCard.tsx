@@ -1,11 +1,14 @@
 import Reactfrom from "react";
-import { View, Text, SafeAreaView, StyleSheet } from 'react-native';
+import { View, Text, SafeAreaView, StyleSheet, ScrollView } from 'react-native';
 
 export default function FlatCard(): JSX.Element {
     return (
         <SafeAreaView>
             <View style={styles.styleCenterText}><Text>FLAT CARDS</Text></View>
-            <View style={styles.container}>
+            <ScrollView horizontal
+                showsHorizontalScrollIndicator={true}
+                >
+                    <View style={styles.container}>
                 <View style={[styles.card, styles.cardRed]}>
                     <Text style={styles.styleText}>RED</Text>
                 </View>
@@ -19,6 +22,8 @@ export default function FlatCard(): JSX.Element {
                     <Text style={styles.styleText}>ORANGE</Text>
                 </View>
             </View>
+                </ScrollView>
+            
         </SafeAreaView>
     )
 }
